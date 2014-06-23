@@ -1,0 +1,24 @@
+http://www.cnblogs.com/zacard-orc/p/3590405.html
+1. 编辑xuser.thrift
+struct User{
+     1: string uid,
+     2: string uname,
+     3: bool usex,
+     4: i16 uage
+    }
+service UserService{
+     void add(1: User u),
+     string adduname(1: string uname),
+     User get(1: string uid)
+}
+2.编辑xuser.thrift
+
+3.npm install thrift
+
+4.thrift   --gen js:node xuser.thrift
+
+5. thrift -r -gen java xuser.thrift
+
+8. node server.js
+
+9. node client.js
